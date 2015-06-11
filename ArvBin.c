@@ -20,13 +20,13 @@ ArvBin* criarNoFolha(int item) {
     return folha;
 }
 
-int buscar(ArvBin* arv, int item) {
+int contem(ArvBin* arv, int item) {
     if (arv == NULL)
         return FALSE;
     if (item < arv->item)
-        return buscar(arv->sae, item);
+        return contem(arv->sae, item);
     if (item > arv->item)
-        return buscar(arv->sad, item);
+        return contem(arv->sad, item);
     return TRUE;
 }
 
