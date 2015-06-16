@@ -1,13 +1,6 @@
 #include "ArvBin.h"
 #include<stdio.h>
 
-void verificaSeExiste(ArvBin *arv, int item) {
-    if (contem(arv, item) == TRUE)
-        printf("O elemento %d foi encontrado!\n", item);
-    else
-        printf("O elemento %d nao foi encontrado!\n", item);
-}
-
 int main() {
     ArvBin *minhaArv = criarArvore();
 
@@ -15,17 +8,18 @@ int main() {
         printf("Arvore vazia!\n");
 
     minhaArv = inserir(minhaArv, 3);
-    minhaArv = inserir(minhaArv, 5);
+    minhaArv = inserir(minhaArv, 1);
+    minhaArv = inserir(minhaArv, 2);
     minhaArv = inserir(minhaArv, 4);
     minhaArv = inserir(minhaArv, 0);
-    minhaArv = inserir(minhaArv, 2);
 
-    verificaSeExiste(minhaArv, 3);
-    verificaSeExiste(minhaArv, 5);
-    verificaSeExiste(minhaArv, 4);
-    verificaSeExiste(minhaArv, 0);
-    verificaSeExiste(minhaArv, 2);
-    verificaSeExiste(minhaArv, -1);
+    minhaArv = remover(minhaArv, 3);
+
+
+    preOrdem(minhaArv);
+
+    printf("h = %d\n", obterAltura(minhaArv));
+
 
 /*  minhaArv = inserir(minhaArv, 5);
     minhaArv = inserir(minhaArv, 3);
