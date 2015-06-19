@@ -108,3 +108,23 @@ void posOrdem(ArvBin* arv) {
       printf("%d ", arv->item);
     }
 }
+
+int alturaArv(ArvBin* arv)
+{
+    if (arv == NULL)
+        return -1;
+    else
+    {
+        int sae,sad;
+        sae = alturaArv(arv->sae);
+        sad = alturaArv(arv->sad);
+        if (sae < sad )
+        {
+            return sad + 1;
+        }
+        else
+        {
+            return sae + 1;
+        }
+    }
+}
