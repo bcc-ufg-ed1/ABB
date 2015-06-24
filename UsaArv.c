@@ -35,9 +35,10 @@ int main() {
     if (buscar(minhaArv, 8) == TRUE)
         printf("\nElemento encontrado!\n");
     else
-        printf("\nElemento n�o encontrado!\n");
+        printf("\nElemento năo encontrado!\n");
 
 */
+printf("\n%d\n",alturaArv(minhaArv)); // Função Altura (Tirar os comentarios acima para ver funcionando).
     return 0;
 }
 
